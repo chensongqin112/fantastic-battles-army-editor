@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { catalog, getRelic, getStrategy, getTrait } from '../domain/catalog.ts';
+import { printReferenceRows } from '../domain/printReference.ts';
 import { formatPoints, formatShoot } from '../domain/resolve.ts';
 import { catalogLabel, useArmyStore, useResolvedArmy } from '../state/store.ts';
 
 export function PrintPage() {
     const army = useArmyStore((s) => s.army);
     const resolved = useResolvedArmy();
+    const reference = printReferenceRows(resolved.entries);
 
     return (
         <div className="mx-auto max-w-4xl px-4 py-6">
@@ -80,6 +82,30 @@ export function PrintPage() {
                     ))}
                 </tbody>
             </table>
+
+            {reference.length > 0 ? (
+                <section className="mt-6">
+                    <h2 className="text-xl">Traits and magic items</h2>
+                    <table className="mt-2 w-full border-collapse text-sm">
+                        <thead>
+                            <tr className="border-b border-ink text-left">
+                                <th className="py-1 pr-3">Name</th>
+                                <th className="pr-3">Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {reference.map((row) => (
+                                <tr key={`${row.kind}:${row.id}`} className="border-b border-line align-top break-inside-avoid">
+                                    <td className="py-2 pr-3 font-medium">{row.name}</td>
+                                    <td className="py-2 pr-3">{row.kind}</td>
+                                    <td className="py-2">{row.description}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </section>
+            ) : null}
 
             <p className="mt-6 text-xs text-muted">Catalog encoded from the Fantastic Battles {catalog.version} army builder. This tool is unofficial and is not a substitute for the rulebook.</p>
         </div>

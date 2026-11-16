@@ -35,6 +35,7 @@ export interface Profile {
 export interface Trait {
     id: string;
     name: string;
+    description: string;
     points: number;
     add: StatMods;
     set: StatMods;
@@ -45,6 +46,7 @@ export interface Trait {
 export interface Relic {
     id: string;
     name: string;
+    description: string;
     points: number;
     add: StatMods;
     set: StatMods;

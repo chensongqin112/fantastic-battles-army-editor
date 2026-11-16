@@ -176,6 +176,7 @@
         {
             "id": "amphibious",
             "name": "Amphibious",
+            "description": "Water counts as open ground. If half the unit is in water, enemies shoot it at −1.",
             "points": 2,
             "add": {},
             "set": {},
@@ -185,6 +186,7 @@
         {
             "id": "artillery",
             "name": "Artillery",
+            "description": "Long range becomes 10bw, and it may pick any legal target. If impetuous, it stays still.",
             "points": 15,
             "add": {},
             "set": {},
@@ -197,6 +199,7 @@
         {
             "id": "artillery-indirect",
             "name": "Artillery (indirect)",
+            "description": "Long range becomes 10bw. It may shoot over intervening units and pick any legal target. If impetuous, it stays still.",
             "points": 20,
             "add": {},
             "set": {},
@@ -209,6 +212,7 @@
         {
             "id": "barrage",
             "name": "Barrage",
+            "description": "Short-range shooting becomes 3. Long range is unchanged.",
             "points": 3,
             "add": {},
             "set": {
@@ -225,6 +229,7 @@
         {
             "id": "belligerent",
             "name": "Belligerent",
+            "description": "+1 Melee on the charge, on top of the normal charge bonus. Some impetuous results make it attack the nearest friend. It will not leave a fight unless a character is attached, and then at −1.",
             "points": -3,
             "add": {},
             "set": {},
@@ -239,6 +244,7 @@
         {
             "id": "berserk",
             "name": "Berserk",
+            "description": "Each melee attack roll of 6 adds one extra attack die. Those extra dice do not explode.",
             "points": 3,
             "add": {},
             "set": {},
@@ -250,6 +256,7 @@
         {
             "id": "character-warlord",
             "name": "Character (Warlord)",
+            "description": "This company is the army's warlord. Its cost includes the warlord plus 5 points, and it gains the warlord's Resolve and Melee. It dies only when the company's Resolve reaches 0.",
             "points": 65,
             "add": {
                 "resolve": 2,
@@ -270,6 +277,7 @@
         {
             "id": "character-mage-lord",
             "name": "Character (Mage-lord)",
+            "description": "This company is the army's mage-lord and may take spells. Its cost includes the mage-lord plus 5 points, and it gains the mage-lord's Resolve and Melee. It dies only when the company's Resolve reaches 0.",
             "points": 80,
             "add": {
                 "resolve": 2,
@@ -290,6 +298,7 @@
         {
             "id": "character-captain",
             "name": "Character (Captain)",
+            "description": "This company counts as a captain. Its cost includes the captain plus 5 points, and it gains the captain's Resolve and Melee. It dies only when the company's Resolve reaches 0.",
             "points": 30,
             "add": {
                 "resolve": 1,
@@ -310,6 +319,7 @@
         {
             "id": "character-magic-user",
             "name": "Character (Magic-user)",
+            "description": "This company counts as a magic-user and may take spells. Its cost includes the magic-user plus 5 points, and it gains the magic-user's Resolve and Melee. It dies only when the company's Resolve reaches 0.",
             "points": 45,
             "add": {
                 "resolve": 1,
@@ -330,6 +340,7 @@
         {
             "id": "drilled",
             "name": "Drilled",
+            "description": "A group may change formation at the start or end of an advance, spending half its movement.",
             "points": 2,
             "add": {},
             "set": {},
@@ -343,6 +354,7 @@
         {
             "id": "doughty",
             "name": "Doughty",
+            "description": "Resolve +1.",
             "points": 4,
             "add": {
                 "resolve": 1
@@ -356,6 +368,7 @@
         {
             "id": "emerge",
             "name": "Emerge",
+            "description": "Not deployed at the start. An activated character places it within 2bw, then a die may shift that spot. It counts as having activated, and as charging if it arrives in contact.",
             "points": 12,
             "add": {},
             "set": {},
@@ -370,6 +383,7 @@
         {
             "id": "ephemeral",
             "name": "Ephemeral",
+            "description": "Ignores terrain modifiers, may pass through impassable terrain if it can clear it, and may pass through friends. Defence becomes 6+ against shooting, except magic missiles.",
             "points": 10,
             "add": {},
             "set": {},
@@ -379,6 +393,7 @@
         {
             "id": "expendable",
             "name": "Expendable",
+            "description": "Its loss does not cause Resolve loss nearby, and it is left out of the army break count.",
             "points": 3,
             "add": {},
             "set": {},
@@ -390,6 +405,7 @@
         {
             "id": "fast",
             "name": "Fast",
+            "description": "Move +1.",
             "points": 1,
             "add": {
                 "move": 1
@@ -403,6 +419,7 @@
         {
             "id": "feast",
             "name": "Feast",
+            "description": "When an enemy it is fighting scatters, it regains 1 Resolve per company in that unit.",
             "points": 4,
             "add": {},
             "set": {},
@@ -412,6 +429,7 @@
         {
             "id": "flying",
             "name": "Flying",
+            "description": "Move +2, ignores terrain movement penalties, and shoots and is shot over other troops. It may evade a charge.",
             "points": 10,
             "add": {
                 "move": 2
@@ -423,6 +441,7 @@
         {
             "id": "foresters",
             "name": "Foresters",
+            "description": "Ignore movement and melee penalties for rough ground and woods.",
             "points": 3,
             "add": {},
             "set": {},
@@ -432,6 +451,7 @@
         {
             "id": "furious-charge",
             "name": "Furious charge",
+            "description": "+2 Melee when it charges, on top of the normal charge bonus.",
             "points": 3,
             "add": {},
             "set": {},
@@ -443,6 +463,7 @@
         {
             "id": "giant",
             "name": "Giant",
+            "description": "Resolve +2 and Melee +2. Cannot form groups. Shoots and is shot over other troops. At Resolve 0 it falls in a random direction and makes two extra attacks against a unit within 1bw.",
             "points": 12,
             "add": {
                 "resolve": 2,
@@ -460,6 +481,7 @@
         {
             "id": "heavy-melee-weapons",
             "name": "Heavy melee weapons",
+            "description": "Every melee opponent's Defence is treated as 4+, including shieldwall.",
             "points": 3,
             "add": {},
             "set": {},
@@ -471,6 +493,7 @@
         {
             "id": "heavy-missile-weapons",
             "name": "Heavy missile weapons",
+            "description": "Shooting targets are Defence 4+. The unit must spend an action reloading before it can shoot again.",
             "points": 1,
             "add": {},
             "set": {},
@@ -482,6 +505,7 @@
         {
             "id": "highlanders",
             "name": "Highlanders",
+            "description": "No movement or melee penalty in rough ground. +1 Melee per company if half its base is on a hill.",
             "points": 3,
             "add": {},
             "set": {},
@@ -491,6 +515,7 @@
         {
             "id": "impulsive",
             "name": "Impulsive",
+            "description": "A late mishap becomes enthusiastic. After activating, if it is not in melee it must move 1d3−1bw straight ahead and may count as charging. It rerolls the stay-put impetuous result.",
             "points": 1,
             "add": {},
             "set": {},
@@ -502,6 +527,7 @@
         {
             "id": "long-spears",
             "name": "Long spears",
+            "description": "+2 Melee when charged in front, or when fighting flying, giant, mounted, or monstrous enemies to the front.",
             "points": 2,
             "add": {},
             "set": {},
@@ -515,6 +541,7 @@
         {
             "id": "malodorous",
             "name": "Malodorous",
+            "description": "Companies within 1bw, friend or foe, suffer −1 Melee, or −2 if mounted. Other identical malodorous units and mindless units ignore it.",
             "points": 4,
             "add": {},
             "set": {},
@@ -524,6 +551,7 @@
         {
             "id": "militia",
             "name": "Militia",
+            "description": "Melee −1.",
             "points": -2,
             "add": {
                 "melee": -1
@@ -535,6 +563,7 @@
         {
             "id": "mindless",
             "name": "Mindless",
+            "description": "Melee −1. Does not lose Resolve when friends scatter, and stays still if impetuous. Only a mage-lord can rally it. If the army's warlord or mage-lord is lost, it immediately loses 5 Resolve.",
             "points": 0,
             "add": {
                 "melee": -1
@@ -550,6 +579,7 @@
         {
             "id": "monstrous",
             "name": "Monstrous",
+            "description": "Resolve +2 and Melee +2.",
             "points": 12,
             "add": {
                 "resolve": 2,
@@ -565,6 +595,7 @@
         {
             "id": "mounted",
             "name": "Mounted",
+            "description": "Resolve +1, Move +2, Melee +1.",
             "points": 8,
             "add": {
                 "resolve": 1,
@@ -585,6 +616,7 @@
         {
             "id": "mundane",
             "name": "Mundane",
+            "description": "Spells affecting it, or a unit it is touching, are cast at −1. Defence 5+ against magic missiles. Prophecy dice cannot change its dice.",
             "points": 5,
             "add": {},
             "set": {},
@@ -597,6 +629,7 @@
         {
             "id": "passenger",
             "name": "Passenger",
+            "description": "An attached character may rally or cast while the unit takes its own action, except when charging or reacting to a charge.",
             "points": 4,
             "add": {},
             "set": {},
@@ -611,6 +644,7 @@
         {
             "id": "pikes",
             "name": "Pikes",
+            "description": "+3 Melee when charged in front, or when fighting flying, giant, mounted, or monstrous enemies to the front. Enemies on the flank or rear get an extra +1 Melee.",
             "points": 3,
             "add": {},
             "set": {},
@@ -627,6 +661,7 @@
         {
             "id": "poison",
             "name": "Poison",
+            "description": "Reroll attack rolls of 1 in shooting and melee.",
             "points": 3,
             "add": {},
             "set": {},
@@ -636,6 +671,7 @@
         {
             "id": "powerful-missile-weapons",
             "name": "Powerful missile weapons",
+            "description": "Shooting targets are Defence 3+. Must reload before shooting again.",
             "points": 5,
             "add": {},
             "set": {},
@@ -647,6 +683,7 @@
         {
             "id": "proud",
             "name": "Proud",
+            "description": "Does not lose Resolve when friendly units scatter.",
             "points": 8,
             "add": {},
             "set": {},
@@ -658,6 +695,7 @@
         {
             "id": "rabble",
             "name": "Rabble",
+            "description": "Resolve −1.",
             "points": -6,
             "add": {
                 "resolve": -1
@@ -671,6 +709,7 @@
         {
             "id": "reckless",
             "name": "Reckless",
+            "description": "Resolve −1, Move +1, Melee +1.",
             "points": -1,
             "add": {
                 "resolve": -1,
@@ -687,6 +726,7 @@
         {
             "id": "regenerate",
             "name": "Regenerate",
+            "description": "In the action phase, roll one die per lost Resolve. Each 6 restores one point.",
             "points": 5,
             "add": {},
             "set": {},
@@ -696,6 +736,7 @@
         {
             "id": "reliable",
             "name": "Reliable",
+            "description": "+1 on mishap rolls and impetuous rolls.",
             "points": 3,
             "add": {},
             "set": {},
@@ -709,6 +750,7 @@
         {
             "id": "shieldwall",
             "name": "Shieldwall",
+            "description": "+1 Defence against shooting and melee to the front. This does not apply against magic missiles, heavy or powerful missiles, or heavy melee weapons.",
             "points": 8,
             "add": {},
             "set": {},
@@ -724,6 +766,7 @@
         {
             "id": "shooting",
             "name": "Shooting",
+            "description": "Melee −1. Shooting becomes 3/2.",
             "points": 5,
             "add": {
                 "melee": -1
@@ -743,6 +786,7 @@
         {
             "id": "shooting-mixed",
             "name": "Shooting (mixed)",
+            "description": "Shooting becomes 2/1. Melee is unchanged.",
             "points": 4,
             "add": {},
             "set": {
@@ -760,6 +804,7 @@
         {
             "id": "shooting-skilled",
             "name": "Shooting (skilled)",
+            "description": "Melee −1. Shooting becomes 3/3.",
             "points": 7,
             "add": {
                 "melee": -1
@@ -779,6 +824,7 @@
         {
             "id": "slow",
             "name": "Slow",
+            "description": "Move −1.",
             "points": -1,
             "add": {
                 "move": -1
@@ -792,6 +838,7 @@
         {
             "id": "skirmishers",
             "name": "Skirmishers",
+            "description": "May pass through friends, ignore rough-ground and wood penalties unless also mounted, and are shot at −1. May evade a frontal charge. In open ground they fight at −1 Melee and their opponent gets +1.",
             "points": 4,
             "add": {},
             "set": {},
@@ -804,6 +851,7 @@
         {
             "id": "stimulants",
             "name": "Stimulants",
+            "description": "Roll once after deployment: always impetuous, or Move +1 and Melee +1, or gain berserk and proud for the battle.",
             "points": 4,
             "add": {},
             "set": {},
@@ -816,6 +864,7 @@
         {
             "id": "swarm",
             "name": "Swarm",
+            "description": "Resolve −1, Move −1, Melee −1. Does not block line of sight, is shot at −1, and its loss does not ripple or count toward the break point.",
             "points": -1,
             "add": {
                 "resolve": -1,
@@ -833,6 +882,7 @@
         {
             "id": "terrifying",
             "name": "Terrifying",
+            "description": "A charger must roll under its starting Resolve, with +1 per attached character, or stop short. Enemies fighting its front suffer −2 Melee. Mindless and other terrifying units ignore this.",
             "points": 25,
             "add": {},
             "set": {},
@@ -846,6 +896,7 @@
         {
             "id": "thrown-weapons",
             "name": "Thrown weapons",
+            "description": "Shooting +1/0. This adds to the existing shooting value.",
             "points": 1,
             "add": {},
             "set": {
@@ -863,6 +914,7 @@
         {
             "id": "unreliable",
             "name": "Unreliable",
+            "description": "−1 on mishap rolls and impetuous rolls.",
             "points": -4,
             "add": {},
             "set": {},
@@ -875,6 +927,7 @@
         {
             "id": "warbeasts",
             "name": "Warbeasts",
+            "description": "In its first melee of the game, reroll failed attack dice.",
             "points": 4,
             "add": {},
             "set": {},
@@ -889,6 +942,7 @@
         {
             "id": "billowing-banner-of-encouragement",
             "name": "Billowing Banner of Encouragement",
+            "description": "Reroll one failed rally die each turn.",
             "points": 8,
             "add": {},
             "set": {}
@@ -896,6 +950,7 @@
         {
             "id": "blade-of-unsurpassable-power",
             "name": "Blade of Unsurpassable Power",
+            "description": "The character and any unit they have joined get +1 melee attack die. A rogue in a duel still rolls three dice, but keeps two of them.",
             "points": 5,
             "add": {
                 "melee": 1
@@ -905,6 +960,7 @@
         {
             "id": "drab-cloak-of-expediency",
             "name": "Drab Cloak of Expediency",
+            "description": "If the character is killed or scatters, on a 4+ they survive and are placed 2bw away.",
             "points": 10,
             "add": {},
             "set": {}
@@ -912,6 +968,7 @@
         {
             "id": "familiar",
             "name": "Familiar",
+            "description": "A mage-lord or magic-user may cast and take another action in the same activation, in either order. The spell is cast at −1.",
             "points": 20,
             "add": {},
             "set": {}
@@ -919,6 +976,7 @@
         {
             "id": "haughty-helm-of-reassurance",
             "name": "Haughty Helm of Reassurance",
+            "description": "Any unit the character joins gains proud.",
             "points": 12,
             "add": {},
             "set": {}
@@ -926,6 +984,7 @@
         {
             "id": "lion-s-roar-talisman",
             "name": "Lion's Roar Talisman",
+            "description": "Command radius +1bw.",
             "points": 8,
             "add": {
                 "command": 1
@@ -935,6 +994,7 @@
         {
             "id": "martyr-s-ring-of-retribution",
             "name": "Martyr's Ring of Retribution",
+            "description": "If the character is killed or scatters in melee, one random enemy character within 1bw is killed on a 4+.",
             "points": 10,
             "add": {},
             "set": {}
@@ -942,6 +1002,7 @@
         {
             "id": "mystical-tome-of-revelation",
             "name": "Mystical Tome of Revelation",
+            "description": "A mage-lord or magic-user gains one extra spell choice.",
             "points": 12,
             "add": {},
             "set": {}
@@ -949,6 +1010,7 @@
         {
             "id": "navigator-s-map-of-wayfinding",
             "name": "Navigator's Map of Wayfinding",
+            "description": "A unit the character has joined ignores terrain movement penalties.",
             "points": 8,
             "add": {},
             "set": {}
@@ -956,6 +1018,7 @@
         {
             "id": "phoenix-bow-of-precision",
             "name": "Phoenix Bow of Precision",
+            "description": "A 5bw shot that can target characters, ignoring normal target priority. An unmodified 6 makes that character lose 1 Resolve.",
             "points": 15,
             "add": {},
             "set": {}
@@ -963,6 +1026,7 @@
         {
             "id": "shadowy-cloak-of-stealth",
             "name": "Shadowy Cloak of Stealth",
+            "description": "While the character is unattached, they cannot be targeted by shooting.",
             "points": 5,
             "add": {},
             "set": {}
@@ -970,6 +1034,7 @@
         {
             "id": "titanic-diadem-of-foresight",
             "name": "Titanic Diadem of Foresight",
+            "description": "If the character or their unit is charged and has not yet activated, they may take an action before the charger. They may still give orders later, but not take a second action.",
             "points": 12,
             "add": {},
             "set": {}
@@ -977,6 +1042,7 @@
         {
             "id": "wicked-blade-of-piercing",
             "name": "Wicked Blade of Piercing",
+            "description": "In a duel, the opponent's Defence is 5+.",
             "points": 8,
             "add": {},
             "set": {}
@@ -984,6 +1050,7 @@
         {
             "id": "winged-boots-of-alacrity",
             "name": "Winged Boots of Alacrity",
+            "description": "The character's Move becomes 6bw.",
             "points": 5,
             "add": {
                 "move": 2
