@@ -1,0 +1,1046 @@
+{
+    "version": "1.2",
+    "characters": [
+        {
+            "id": "warlord",
+            "name": "Warlord",
+            "resolve": 2,
+            "move": 4,
+            "melee": 2,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 6,
+            "command": 3,
+            "points": 60,
+            "mayTakeTraits": false,
+            "limitNote": "1 Warlord or Mage-lord"
+        },
+        {
+            "id": "mage-lord",
+            "name": "Mage-lord",
+            "resolve": 2,
+            "move": 4,
+            "melee": 1,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 6,
+            "command": 3,
+            "points": 75,
+            "mayTakeTraits": false,
+            "limitNote": "1 Warlord or Mage-lord"
+        },
+        {
+            "id": "captain",
+            "name": "Captain",
+            "resolve": 1,
+            "move": 4,
+            "melee": 1,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 5,
+            "command": 2,
+            "points": 25,
+            "mayTakeTraits": false,
+            "limitNote": "≤3 per 500 points"
+        },
+        {
+            "id": "magic-user",
+            "name": "Magic-user",
+            "resolve": 1,
+            "move": 4,
+            "melee": 1,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 5,
+            "command": 0,
+            "points": 40,
+            "mayTakeTraits": false,
+            "limitNote": "≤1 per 500 points"
+        },
+        {
+            "id": "rogue",
+            "name": "Rogue",
+            "resolve": 1,
+            "move": 4,
+            "melee": 1,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 6,
+            "command": 0,
+            "points": 25,
+            "mayTakeTraits": false,
+            "limitNote": "0-1 or 0-2 if Cloaks and Daggers strategy is taken"
+        }
+    ],
+    "companies": [
+        {
+            "id": "elite-company",
+            "name": "Elite company",
+            "resolve": 5,
+            "move": 2,
+            "melee": 4,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 5,
+            "command": 0,
+            "points": 36,
+            "mayTakeTraits": true,
+            "limitNote": null
+        },
+        {
+            "id": "formed-company",
+            "name": "Formed company",
+            "resolve": 4,
+            "move": 2,
+            "melee": 3,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 5,
+            "command": 0,
+            "points": 30,
+            "mayTakeTraits": true,
+            "limitNote": null
+        },
+        {
+            "id": "irregular-company",
+            "name": "Irregular company",
+            "resolve": 3,
+            "move": 3,
+            "melee": 3,
+            "shootShort": 1,
+            "shootLong": 0,
+            "defence": 4,
+            "command": 0,
+            "points": 22,
+            "mayTakeTraits": true,
+            "limitNote": null
+        },
+        {
+            "id": "fantastic-beast",
+            "name": "Fantastic beast",
+            "resolve": 5,
+            "move": 3,
+            "melee": 4,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 4,
+            "command": 0,
+            "points": 31,
+            "mayTakeTraits": true,
+            "limitNote": null
+        },
+        {
+            "id": "dragon",
+            "name": "Dragon",
+            "resolve": 6,
+            "move": 4,
+            "melee": 4,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 5,
+            "command": 0,
+            "points": 42,
+            "mayTakeTraits": true,
+            "limitNote": null
+        },
+        {
+            "id": "ordnance-battery",
+            "name": "Ordnance battery",
+            "resolve": 3,
+            "move": 1,
+            "melee": 1,
+            "shootShort": 0,
+            "shootLong": 2,
+            "defence": 4,
+            "command": 0,
+            "points": 21,
+            "mayTakeTraits": true,
+            "limitNote": null
+        },
+        {
+            "id": "vehicle",
+            "name": "Vehicle",
+            "resolve": 5,
+            "move": 4,
+            "melee": 3,
+            "shootShort": 0,
+            "shootLong": 0,
+            "defence": 5,
+            "command": 0,
+            "points": 36,
+            "mayTakeTraits": true,
+            "limitNote": null
+        }
+    ],
+    "traits": [
+        {
+            "id": "amphibious",
+            "name": "Amphibious",
+            "points": 2,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "artillery",
+            "name": "Artillery",
+            "points": 15,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "artillery-indirect",
+                "shieldwall"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "artillery-indirect",
+            "name": "Artillery (indirect)",
+            "points": 20,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "artillery",
+                "shieldwall"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "barrage",
+            "name": "Barrage",
+            "points": 3,
+            "add": {},
+            "set": {
+                "shootShort": 3
+            },
+            "incompatibleWith": [
+                "shooting-mixed",
+                "shooting-skilled",
+                "thrown-weapons",
+                "shooting"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "belligerent",
+            "name": "Belligerent",
+            "points": -3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "character-warlord",
+                "character-mage-lord",
+                "character-captain",
+                "character-magic-user"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "berserk",
+            "name": "Berserk",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "drilled"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "character-warlord",
+            "name": "Character (Warlord)",
+            "points": 65,
+            "add": {
+                "resolve": 2,
+                "melee": 2,
+                "command": 3
+            },
+            "set": {},
+            "incompatibleWith": [
+                "mounted",
+                "passenger",
+                "character-mage-lord",
+                "character-captain",
+                "character-magic-user",
+                "belligerent"
+            ],
+            "isCharacterTrait": true
+        },
+        {
+            "id": "character-mage-lord",
+            "name": "Character (Mage-lord)",
+            "points": 80,
+            "add": {
+                "resolve": 2,
+                "melee": 1,
+                "command": 3
+            },
+            "set": {},
+            "incompatibleWith": [
+                "mounted",
+                "passenger",
+                "character-warlord",
+                "character-captain",
+                "character-magic-user",
+                "belligerent"
+            ],
+            "isCharacterTrait": true
+        },
+        {
+            "id": "character-captain",
+            "name": "Character (Captain)",
+            "points": 30,
+            "add": {
+                "resolve": 1,
+                "melee": 1,
+                "command": 2
+            },
+            "set": {},
+            "incompatibleWith": [
+                "mounted",
+                "passenger",
+                "character-mage-lord",
+                "character-warlord",
+                "character-magic-user",
+                "belligerent"
+            ],
+            "isCharacterTrait": true
+        },
+        {
+            "id": "character-magic-user",
+            "name": "Character (Magic-user)",
+            "points": 45,
+            "add": {
+                "resolve": 1,
+                "melee": 1,
+                "command": 0
+            },
+            "set": {},
+            "incompatibleWith": [
+                "mounted",
+                "passenger",
+                "character-mage-lord",
+                "character-captain",
+                "character-warlord",
+                "belligerent"
+            ],
+            "isCharacterTrait": true
+        },
+        {
+            "id": "drilled",
+            "name": "Drilled",
+            "points": 2,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "berserk",
+                "stimulants",
+                "impulsive"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "doughty",
+            "name": "Doughty",
+            "points": 4,
+            "add": {
+                "resolve": 1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "rabble"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "emerge",
+            "name": "Emerge",
+            "points": 12,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "character-mage-lord",
+                "character-captain",
+                "character-magic-user",
+                "character-warlord"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "ephemeral",
+            "name": "Ephemeral",
+            "points": 10,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "expendable",
+            "name": "Expendable",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "swarm"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "fast",
+            "name": "Fast",
+            "points": 1,
+            "add": {
+                "move": 1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "slow"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "feast",
+            "name": "Feast",
+            "points": 4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "flying",
+            "name": "Flying",
+            "points": 10,
+            "add": {
+                "move": 2
+            },
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "foresters",
+            "name": "Foresters",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "furious-charge",
+            "name": "Furious charge",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "skirmishers"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "giant",
+            "name": "Giant",
+            "points": 12,
+            "add": {
+                "resolve": 2,
+                "melee": 2
+            },
+            "set": {},
+            "incompatibleWith": [
+                "monstrous",
+                "swarm",
+                "long-spears",
+                "shieldwall"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "heavy-melee-weapons",
+            "name": "Heavy melee weapons",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "pikes"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "heavy-missile-weapons",
+            "name": "Heavy missile weapons",
+            "points": 1,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "powerful-missile-weapons"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "highlanders",
+            "name": "Highlanders",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "impulsive",
+            "name": "Impulsive",
+            "points": 1,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "drilled"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "long-spears",
+            "name": "Long spears",
+            "points": 2,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "mounted",
+                "giant",
+                "pikes"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "malodorous",
+            "name": "Malodorous",
+            "points": 4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "militia",
+            "name": "Militia",
+            "points": -2,
+            "add": {
+                "melee": -1
+            },
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "mindless",
+            "name": "Mindless",
+            "points": 0,
+            "add": {
+                "melee": -1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "reliable",
+                "unreliable",
+                "proud"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "monstrous",
+            "name": "Monstrous",
+            "points": 12,
+            "add": {
+                "resolve": 2,
+                "melee": 2
+            },
+            "set": {},
+            "incompatibleWith": [
+                "giant",
+                "swarm"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "mounted",
+            "name": "Mounted",
+            "points": 8,
+            "add": {
+                "resolve": 1,
+                "move": 2,
+                "melee": 1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "long-spears",
+                "shieldwall",
+                "character-mage-lord",
+                "character-captain",
+                "character-magic-user",
+                "character-warlord"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "mundane",
+            "name": "Mundane",
+            "points": 5,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "ephemeral",
+                "terrifying"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "passenger",
+            "name": "Passenger",
+            "points": 4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "character-mage-lord",
+                "character-captain",
+                "character-magic-user",
+                "character-warlord"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "pikes",
+            "name": "Pikes",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "giant",
+                "mounted",
+                "shieldwall",
+                "swarm",
+                "long-spears",
+                "heavy-melee-weapons"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "poison",
+            "name": "Poison",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "powerful-missile-weapons",
+            "name": "Powerful missile weapons",
+            "points": 5,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "heavy-missile-weapons"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "proud",
+            "name": "Proud",
+            "points": 8,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "mindless"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "rabble",
+            "name": "Rabble",
+            "points": -6,
+            "add": {
+                "resolve": -1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "doughty"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "reckless",
+            "name": "Reckless",
+            "points": -1,
+            "add": {
+                "resolve": -1,
+                "move": 1,
+                "melee": 1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "doughty",
+                "militia"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "regenerate",
+            "name": "Regenerate",
+            "points": 5,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "reliable",
+            "name": "Reliable",
+            "points": 3,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "unreliable",
+                "mindless",
+                "stimulants"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "shieldwall",
+            "name": "Shieldwall",
+            "points": 8,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "skirmishers",
+                "mounted",
+                "artillery",
+                "artillery-indirect",
+                "giant"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "shooting",
+            "name": "Shooting",
+            "points": 5,
+            "add": {
+                "melee": -1
+            },
+            "set": {
+                "shootShort": 3,
+                "shootLong": 2
+            },
+            "incompatibleWith": [
+                "barrage",
+                "thrown-weapons",
+                "shooting-mixed",
+                "shooting-skilled"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "shooting-mixed",
+            "name": "Shooting (mixed)",
+            "points": 4,
+            "add": {},
+            "set": {
+                "shootShort": 2,
+                "shootLong": 1
+            },
+            "incompatibleWith": [
+                "barrage",
+                "thrown-weapons",
+                "shooting",
+                "shooting-skilled"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "shooting-skilled",
+            "name": "Shooting (skilled)",
+            "points": 7,
+            "add": {
+                "melee": -1
+            },
+            "set": {
+                "shootShort": 3,
+                "shootLong": 3
+            },
+            "incompatibleWith": [
+                "barrage",
+                "thrown-weapons",
+                "shooting",
+                "shooting-mixed"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "slow",
+            "name": "Slow",
+            "points": -1,
+            "add": {
+                "move": -1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "fast"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "skirmishers",
+            "name": "Skirmishers",
+            "points": 4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "shieldwall",
+                "furious-charge"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "stimulants",
+            "name": "Stimulants",
+            "points": 4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "reliable",
+                "drilled"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "swarm",
+            "name": "Swarm",
+            "points": -1,
+            "add": {
+                "resolve": -1,
+                "move": -1,
+                "melee": -1
+            },
+            "set": {},
+            "incompatibleWith": [
+                "expendable",
+                "monstrous",
+                "giant"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "terrifying",
+            "name": "Terrifying",
+            "points": 25,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "militia",
+                "mundane",
+                "rabble"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "thrown-weapons",
+            "name": "Thrown weapons",
+            "points": 1,
+            "add": {},
+            "set": {
+                "shootShort": 1,
+                "shootLong": 0
+            },
+            "incompatibleWith": [
+                "barrage",
+                "shooting",
+                "shooting-mixed",
+                "shooting-skilled"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "unreliable",
+            "name": "Unreliable",
+            "points": -4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "reliable",
+                "mindless"
+            ],
+            "isCharacterTrait": false
+        },
+        {
+            "id": "warbeasts",
+            "name": "Warbeasts",
+            "points": 4,
+            "add": {},
+            "set": {},
+            "incompatibleWith": [
+                "rabble",
+                "swarm"
+            ],
+            "isCharacterTrait": false
+        }
+    ],
+    "relics": [
+        {
+            "id": "billowing-banner-of-encouragement",
+            "name": "Billowing Banner of Encouragement",
+            "points": 8,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "blade-of-unsurpassable-power",
+            "name": "Blade of Unsurpassable Power",
+            "points": 5,
+            "add": {
+                "melee": 1
+            },
+            "set": {}
+        },
+        {
+            "id": "drab-cloak-of-expediency",
+            "name": "Drab Cloak of Expediency",
+            "points": 10,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "familiar",
+            "name": "Familiar",
+            "points": 20,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "haughty-helm-of-reassurance",
+            "name": "Haughty Helm of Reassurance",
+            "points": 12,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "lion-s-roar-talisman",
+            "name": "Lion's Roar Talisman",
+            "points": 8,
+            "add": {
+                "command": 1
+            },
+            "set": {}
+        },
+        {
+            "id": "martyr-s-ring-of-retribution",
+            "name": "Martyr's Ring of Retribution",
+            "points": 10,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "mystical-tome-of-revelation",
+            "name": "Mystical Tome of Revelation",
+            "points": 12,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "navigator-s-map-of-wayfinding",
+            "name": "Navigator's Map of Wayfinding",
+            "points": 8,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "phoenix-bow-of-precision",
+            "name": "Phoenix Bow of Precision",
+            "points": 15,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "shadowy-cloak-of-stealth",
+            "name": "Shadowy Cloak of Stealth",
+            "points": 5,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "titanic-diadem-of-foresight",
+            "name": "Titanic Diadem of Foresight",
+            "points": 12,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "wicked-blade-of-piercing",
+            "name": "Wicked Blade of Piercing",
+            "points": 8,
+            "add": {},
+            "set": {}
+        },
+        {
+            "id": "winged-boots-of-alacrity",
+            "name": "Winged Boots of Alacrity",
+            "points": 5,
+            "add": {
+                "move": 2
+            },
+            "set": {}
+        }
+    ],
+    "strategies": [
+        {
+            "id": "agent",
+            "name": "Agent",
+            "points": 10
+        },
+        {
+            "id": "ambush",
+            "name": "Ambush",
+            "points": 15
+        },
+        {
+            "id": "cloaks-and-daggers",
+            "name": "Cloaks and Daggers",
+            "points": 10
+        },
+        {
+            "id": "drillmaster",
+            "name": "Drillmaster",
+            "points": 5
+        },
+        {
+            "id": "master-of-the-horse",
+            "name": "Master of the Horse",
+            "points": 15
+        },
+        {
+            "id": "night-march",
+            "name": "Night March",
+            "points": 15
+        },
+        {
+            "id": "quartermaster",
+            "name": "Quartermaster",
+            "points": 25
+        },
+        {
+            "id": "scouts",
+            "name": "Scouts",
+            "points": 10
+        }
+    ],
+    "limits": {
+        "maxTraitsPerCompany": 3,
+        "maxStrategies": 3,
+        "warlordOrMageLord": 1,
+        "captainsPer500": 3,
+        "magicUsersPer500": 1,
+        "roguesDefault": 1,
+        "roguesWithCloaksAndDaggers": 2,
+        "spellSlots": 3
+    }
+}

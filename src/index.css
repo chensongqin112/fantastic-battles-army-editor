@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-display: 'Source Serif 4', 'Palatino Linotype', Palatino, serif;
+    --font-ui: 'Source Sans 3', 'Segoe UI', sans-serif;
+    --color-ink: #1c1913;
+    --color-muted: #5c5648;
+    --color-paper: #f4efe4;
+    --color-card: #fffdf8;
+    --color-line: #cbbfa8;
+    --color-brass: #8a5a12;
+    --color-alert: #8b1e1e;
+}
+
+html {
+    color: var(--color-ink);
+    background: var(--color-paper);
+    font-family: var(--font-ui);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+.display {
+    font-family: var(--font-display);
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+}
