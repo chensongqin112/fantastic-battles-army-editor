@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { catalog, getTrait, racialTraitOptions } from '../domain/catalog.ts';
 import { formatPoints, formatShoot } from '../domain/resolve.ts';
+import { safeParseArmyDocument } from '../domain/schema.ts';
 import type { ArmyEntry } from '../domain/types.ts';
 import { decodeArmy, encodeArmy, SHARE_PARAM } from '../state/codec.ts';
 import { catalogLabel, useArmyStore, useResolvedArmy } from '../state/store.ts';
@@ -15,10 +16,12 @@ const btnPrimary =
 
 export function EditorPage() {
     const army = useArmyStore((s) => s.army);
-    const { patchArmy, addEntry, updateEntry, removeEntry, resetArmy } = useArmyStore();
+    const { setArmy, patchArmy, addEntry, updateEntry, removeEntry, resetArmy } = useArmyStore();
     const resolved = useResolvedArmy();
     const [searchParams] = useSearchParams();
     const [copied, setCopied] = useState(false);
+    const [importError, setImportError] = useState<string | null>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
     const payload = searchParams.get(SHARE_PARAM);
     const shareError = payload && !decodeArmy(payload) ? 'Could not read the shared army link.' : null;
 
@@ -37,6 +40,25 @@ export function EditorPage() {
         a.download = `${army.name.replace(/\s+/g, '-').toLowerCase() || 'army'}.json`;
         a.click();
         URL.revokeObjectURL(url);
+    }
+
+    function importJson(file: File) {
+        const reader = new FileReader();
+        reader.onload = () => {
+            try {
+                const parsed = safeParseArmyDocument(JSON.parse(String(reader.result)));
+                if (!parsed) {
+                    setImportError('That file is not a valid army list.');
+                    return;
+                }
+                setImportError(null);
+                setArmy(parsed);
+            } catch {
+                setImportError('That file is not valid JSON.');
+            }
+        };
+        reader.onerror = () => setImportError('Could not read that file.');
+        reader.readAsText(file);
     }
 
     const over = resolved.totalPoints > army.pointsLimit;
@@ -65,6 +87,20 @@ export function EditorPage() {
                     <button type="button" className={btnClass} onClick={downloadJson}>
                         Export JSON
                     </button>
+                    <button type="button" className={btnClass} onClick={() => fileInputRef.current?.click()}>
+                        Import JSON
+                    </button>
+                    <input
+                        ref={fileInputRef}
+                        type="file"
+                        accept="application/json,.json"
+                        className="hidden"
+                        onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            e.target.value = '';
+                            if (file) importJson(file);
+                        }}
+                    />
                     <button type="button" className={btnClass} onClick={resetArmy}>
                         New army
                     </button>
@@ -72,6 +108,7 @@ export function EditorPage() {
             </header>
 
             {shareError ? <p className="mb-4 text-sm text-alert">{shareError}</p> : null}
+            {importError ? <p className="mb-4 text-sm text-alert">{importError}</p> : null}
 
             <section className="mb-6 grid gap-4 md:grid-cols-4">
                 <label className="block text-sm">
